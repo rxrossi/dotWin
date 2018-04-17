@@ -1,0 +1,88 @@
+snippet     afr
+  (${1}) => (${0})
+
+snippet     clf
+  console.log(
+    JSON.stringify(${0}, null, 2)
+  )
+snippet     afc
+  (${1}) => {
+    ${0}
+  }
+
+snippet     func
+  function ${1} (${2}) {
+    ${0}
+  }
+
+snippet     rcomp
+  class ${1} extends React.${2:Component} {
+    render () {
+      return (
+        ${0}
+      );
+    }
+  }
+
+snippet     const
+  const ${1} = ${0};
+
+snippet     let
+  let ${1} = ${0};
+
+snippet     :
+  ${1}:${0},
+
+snippet     expect
+  expect(${1}).${2}(${0});
+
+snippet     reducer
+  (state = ${1}, action) => {
+    switch (action.type) {
+      ${0}
+      default:
+        return state;
+    }
+  }
+
+snippet     import
+  import ${1} from '${0}';
+
+snippet     tit
+  it('${1}', () => {
+    // Prepare
+    ${0}
+    // Act
+
+    // Assert
+  });
+
+snippet     xit
+  xit('${1}', () => {
+
+  });
+
+snippet     tdesc
+  describe('${1}', () => {
+    ${0}
+  });
+
+snippet     beach
+  beforeEach(${1}() => {
+    ${0}
+  });
+
+snippet     aeach
+  afterEach(${1}() => {
+    ${0}
+  });
+
+snippet     ball
+  beforeAll(${1}() => {
+    ${0}
+  });
+
+snippet     aall
+  afterAll(${1}() => {
+    ${0}
+  });
