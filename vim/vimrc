@@ -47,8 +47,7 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " uncategorized yet vim settings
 set wildmenu
-set lazyredraw
-set cursorline
+set noswapfile
 set shortmess=A
 set linebreak
 set mouse=a
