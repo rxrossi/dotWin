@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Editor config
+export EDITOR=/usr/bin/vim
+
 # Aliases
 alias dot="cd ~/dotWin"
 alias dotv="cd ~/dotWin && v"
@@ -99,3 +102,4 @@ alias tat="tmux attach-session -t "
 PS1=$'%{\e]0;%d\a%}\n%F{green}%n@%m %F{yellow}%d%f\n%# '
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
+export TERM=xterm-256color

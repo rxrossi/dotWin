@@ -10,7 +10,6 @@ ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 It might be necessary to run prefix(usually ctrl+b) and then I (uppercase)
 
-
 # ZSH
 
 ## install:
@@ -23,3 +22,5 @@ Edit zshrc export ZSH line to match current username
 ln -s -f ~/dotfiles/zsh/zshrc ~/.zshrc
 ```
 
+# Mintty
+ln -s -f ~/dotWin/minttyrc ~/.minttyrc

@@ -12,13 +12,15 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-projectionist'
 Plug 'sheerun/vim-polyglot'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
 
 if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
- Plug 'Shougo/deoplete.nvim'
- Plug 'roxma/nvim-yarp'
- Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -31,18 +33,18 @@ let g:deoplete#enable_at_startup = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 1
 let g:ale_fixers = {
- \   'javascript': ['prettier','eslint'],
-\}
+      \   'javascript': ['prettier','eslint'],
+      \}
 let g:ale_fix_on_save = 1
 "nnoremap <leader>an :alenextwrap<cr>
 "nnoremap <leader>ap :alepreviouswrap<cr>
 
 " CtrlP custom Settings
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules)$',
-\ 'file': '\v\.(exe|so|dll)$',
-\ 'link': 'some_bad_symbolic_links',
-\ }
+      \ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules)$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
 let g:ctrlp_working_path_mode = 'ra'
 
 " uncategorized yet vim settings
@@ -81,17 +83,28 @@ map <space> <leader>
 set autochdir
 
 " air-line
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
+let g:airline_theme='one'
+
+"set term=screen-256color
+colorscheme one
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+"set t_8f=^[[38;2;%lu;%lu;%lum  " Needed in tmux
+"set t_8b=^[[48;2;%lu;%lu;%lum  " Ditto
 
 " " vim-jsx enable for .js
 let g:jsx_ext_required = 0
 
 " emmet
 let g:user_emmet_settings = {
-\  'javascript.jsx' : {
-\      'extends' : 'jsx',
-\  },
-\}
+      \  'javascript.jsx' : {
+      \      'extends' : 'jsx',
+      \  },
+      \}
 
 " Plugin key-mappings.
 let g:neosnippet#snippets_directory='~/.local/share/nvim/my-snippets/'
@@ -109,12 +122,10 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 " \ neosnippet#expandable_or_jumpable() ?
 " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 " smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
- \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif"
 let g:neosnippet#snippets_directory='~/dotWin/vim/my-snippets'
-
-colorscheme delek
