@@ -23,4 +23,6 @@ ln -s -f ~/dotfiles/zsh/zshrc ~/.zshrc
 ```
 
 # Mintty
+```
 ln -s -f ~/dotWin/minttyrc ~/.minttyrc
+```
